@@ -1,29 +1,28 @@
+import { Metadata } from "next"
 import React from 'react'
 import { UserLoginForm } from "./user-login-form"
 import Link from "next/link"
-import Image from "next/image"
+import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
+
+export const metadata: Metadata = {
+  title: "Login",
+  description: "Authentication forms built using the components.",
+}
 export default function LoginPage() {
   return (
     <>
-      <div className="md:hidden">
-
-        <Image
-          src="/examples/authentication-light.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="block dark:hidden"
-        />
-        <Image
-          src="/examples/authentication-dark.png"
-          width={1280}
-          height={843}
-          alt="Authentication"
-          className="hidden dark:block"
-        />
-      </div>
-      <div className="container relative hidden h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+        <Link
+          href="/"
+          className={cn(
+            buttonVariants({ variant: "ghost" }),
+            "absolute left-4 top-4 md:left-8 md:top-8 z-10"
+          )}
+        >
+          Back to create an account
+        </Link>
+      <div className="container relative hidden h-screen flex-col items-center justify-center md:grid lg:max-w-none lg:px-0">
         <div className="lg:p-8">
           <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
             <div className="flex flex-col space-y-2 text-center">

@@ -13,7 +13,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import Link from "next/link"
 
 interface UserLoginFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -22,9 +21,9 @@ export function UserLoginForm({className, ...props}: UserLoginFormProps) {
     <div className={cn("grid gap-6", className)} {...props}>
     <Card>
       <CardHeader className="space-y-1">
-        <CardTitle className="text-2xl">Login an account</CardTitle>
+        <CardTitle className="text-2xl">Login account</CardTitle>
         <CardDescription>
-          Enter your email below to Login your account
+          Enter your email to Login your account
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
@@ -58,13 +57,12 @@ export function UserLoginForm({className, ...props}: UserLoginFormProps) {
         </div>
         <div className="grid gap-2">
           <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" />
+          <Input id="password" type="password" placeholder="Password" />
         </div>
       </CardContent>
       <CardFooter>
         <Button className="w-full">Login account</Button>
       </CardFooter>
-        <Link href='/register' className="w-full">Create an account</Link>
     </Card>
     </div>
   )

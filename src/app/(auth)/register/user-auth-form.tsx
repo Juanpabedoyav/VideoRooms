@@ -58,6 +58,16 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               autoCorrect="off"
               disabled={isLoading}
             />
+                 <Input
+              id="validate-password"
+              placeholder="Validate Password"
+              type="validate-password"
+              name="validate-password"
+              autoCapitalize="none"
+              autoComplete="validate-password"
+              autoCorrect="off"
+              disabled={isLoading}
+            />
           </div>
           <Button disabled={isLoading}>
             {isLoading && (
